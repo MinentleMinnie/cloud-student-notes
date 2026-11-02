@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Student Notes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1eee8;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #704214;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        input {
+            padding: 12px;
+            width: 250px;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #704214;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cloud Student Notes</h1>
+
+    <p>Keep your study notes organised in one place.</p>
+
+    <form action="/add" method="POST">
+
+        <input
+            type="text"
+            name="note"
+            placeholder="Enter a study note"
+            required
+        >
+
+        <button type="submit">Save Note</button>
+
+    </form>
+
+    <h2>My Notes</h2>
+
+    <ul>
+        {% for note in notes %}
+            <li>{{ note }}</li>
+        {% else %}
+            <li>No notes yet. Add your first note!</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
