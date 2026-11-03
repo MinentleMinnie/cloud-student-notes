@@ -38,4 +38,4 @@ cloud-student-notes/
     └── index.html
 
 
-WTC-HUAUDX59 .
+WTC-HUAUDX59 
